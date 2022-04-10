@@ -1,1 +1,12 @@
-console.log("working...");
+
+const fs = require('fs')
+
+const content = new Date().toString().replace(/T/, ':').replace(/\.\w*/, '');
+
+fs.writeFile('Z:\\dev\\21_10_03_lindbergh\\phase2\\vscode\\VSCode-win32-x64-1.65.2\\data\\extensions\\test\\poc.txt', content, err => {
+  if (err) {
+    console.error(err)
+    return
+  }
+  //file written successfully
+})
