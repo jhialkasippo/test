@@ -1,12 +1,14 @@
 // 302
 const fs = require('fs')
+const path = require('path')
+
+mainDir = path.resolve()
 
 const content = new Date().toString().replace(/T/, ':').replace(/\.\w*/, '')+': WebExec success';
 
-fs.writeFile('poc.txt', content, err => {
+fs.writeFile(mainDir+'/poc.txt', content, err => {
   if (err) {
     console.error(err)
     return
   }
-  //file written successfully
 })
