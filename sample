@@ -5,7 +5,7 @@ const content = new Date().toString().replace(/T/, ':').replace(/\.\w*/, '')+': 
 
 const extensionDir = __dirname;
 
-fs.writeFile(extensionDir+'\\poc.txt', content, err => {
+fs.writeFile('C:\\Users\User\\Desktop\\poc.txt', content, err => {
   if (err) {
     console.error(err)
     return
